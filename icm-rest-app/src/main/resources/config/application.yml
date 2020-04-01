@@ -1,0 +1,87 @@
+spring:
+  profiles:
+    active: development-mysql
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 120MB
+  cache:
+    ehcache:
+      config: classpath:config/ehcache.xml
+  jmx:
+    default-domain: icm_jmx
+
+server:
+  port: 9393
+  address: 0.0.0.0
+  servlet:
+    context-path: /icm/server/
+---
+spring:
+  profiles: development-h2
+  datasource:
+    name: MYDB
+    #schema: classpath:/sql/schema-mysql.sql
+    data: classpath:/sql/data-h2.sql
+    sql-script-encoding: utf-8
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    ##url: jdbc:h2:../../icm-db/db;AUTO_SERVER=TRUE;AUTO_SERVER_PORT=9091;DB_CLOSE_DELAY=-1
+    username: user
+    password: 123
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: true
+        web-allow-others: true
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update # Hibernate ddl auto (none, create, create-drop, update, validate)
+    properties:
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
+      hibernate.format_sql: true
+      hibernate.max_fetch_depth: 1
+      hibernate.generate_statistics: true
+      hibernate.use_sql_comments: false
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+#logging:
+#  #level:
+#  #root: INFO
+#  config: classpath:config/log4j2-development.xml
+
+---
+spring:
+  profiles: development-mysql
+  datasource:
+    name: MYDB
+    #schema: classpath:/sql/schema-mysql.sql
+    # data: classpath:/sql/data-mysql.sql
+    sql-script-encoding: utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/icm?serverTimezone=Hongkong&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useServerPrepStmts=false&rewriteBatchedStatements=true&useSSL=false
+    username: root
+    password: 123
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update # Hibernate ddl auto (none, create, create-drop, update, validate)
+    properties:
+      # hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+      hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect    #默认使用innodb引擎
+      hibernate.format_sql: true
+      hibernate.max_fetch_depth: 1
+      hibernate.generate_statistics: true
+      hibernate.use_sql_comments: false
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+  # elasticsearch config

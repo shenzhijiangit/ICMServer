@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>InternalControlManagement</artifactId>
+        <groupId>org.shenzhijian.com</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>icm-budget</artifactId>
+    <name>预算模块</name>
+    <packaging>pom</packaging>
+    <modules>
+        <module>icm-budget-persistence</module>
+        <module>icm-budget-rest-api</module>
+        <module>icm-budget-service</module>
+    </modules>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.shenzhijian.com</groupId>
+                <artifactId>icm-budget-persistence</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.shenzhijian.com</groupId>
+                <artifactId>icm-budget-service</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.shenzhijian.com</groupId>
+                <artifactId>icm-budget-rest-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

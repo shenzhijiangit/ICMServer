@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.shenzhijian.com</groupId>
+    <artifactId>InternalControlManagement</artifactId>
+    <name>内部控制管理系统</name>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>icm-rest-app</module>
+        <module>icm-base</module>
+        <module>icm-budget</module>
+        <module>icm-contract</module>
+        <module>icm-payment</module>
+        <module>icm-purchase</module>
+        <module>icm-project</module>
+        <module>icm-asset</module>
+    </modules>
+
+    <properties>
+        <!-- 要修改整个框架的版本时，修改此版本号，然后直接执行mvn versions:set命令就ok了 -->
+        <matech.framework.version>1.0.6.RELEASE</matech.framework.version>
+        <icm.version>1.0.0-SNAPSHOT</icm.version>
+        <main.class>com.matech.Application</main.class>
+        <spring.boot.version>2.1.4.RELEASE</spring.boot.version>
+        <aviator.version>4.2.0</aviator.version>
+        <guava.version>27.1-jre</guava.version>
+        <matech.workflow.version>1.0-SNAPSHOT</matech.workflow.version>
+        <elasticsearch.version>7.0.0</elasticsearch.version>
+        <insight.version>1.0.6.RELEASE</insight.version>
+        <mysql.version>5.1.47</mysql.version>
+        <dm-dialect.version>5.3</dm-dialect.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>2.1.4.RELEASE</version>
+            </dependency>
+            <!--<dependency>-->
+            <!--<groupId>org.springframework.security</groupId>-->
+            <!--<artifactId>spring-security-test</artifactId>-->
+            <!--<version>${spring.boot.version}</version>-->
+            <!--<scope>test</scope>-->
+            <!--</dependency>-->
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

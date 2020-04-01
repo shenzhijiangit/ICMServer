@@ -1,0 +1,29 @@
+{
+  "properties": [
+    {
+      "name": "app.workflow.password",
+      "type": "java.lang.String",
+      "description": "Description for app.workflow.password."
+    },
+    {
+      "name": "app.workflow.url",
+      "type": "java.lang.String",
+      "description": "Description for app.workflow.url."
+    },
+    {
+      "name": "app.workflow.user",
+      "type": "java.lang.String",
+      "description": "Description for app.workflow.user."
+    },
+    {
+      "name": "app.workflow.sync-base-data.corn",
+      "type": "java.lang.String",
+      "description": "Description for app.workflow.sync-base-data.corn."
+    },
+    {
+      "name": "spring.data.elasticsearch.requestTimeout",
+      "type": "java.lang.String",
+      "description": "Description for spring.data.elasticsearch.requestTimeout."
+    }
+  ]
+}

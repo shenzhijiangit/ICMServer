@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="icm-asset-persistence" />
+        <module name="icm-asset-rest-api" />
+        <module name="icm-asset-service" />
+        <module name="icm-base-model" />
+        <module name="icm-base-persistence" />
+        <module name="icm-base-rest-api" />
+        <module name="icm-base-service" />
+        <module name="icm-budget-persistence" />
+        <module name="icm-budget-rest-api" />
+        <module name="icm-budget-service" />
+        <module name="icm-contract-persistence" />
+        <module name="icm-contract-rest-api" />
+        <module name="icm-contract-service" />
+        <module name="icm-payment-persistence" />
+        <module name="icm-payment-rest-api" />
+        <module name="icm-payment-service" />
+        <module name="icm-project-persistence" />
+        <module name="icm-project-rest-api" />
+        <module name="icm-project-service" />
+        <module name="icm-purchase-persistence" />
+        <module name="icm-purchase-rest-api" />
+        <module name="icm-purchase-service" />
+        <module name="icm-rest-app" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
